@@ -22,6 +22,7 @@ ls
 echo $PATH
 #mv d
 cd /
+mv /github/workspace/docker-credential-secretservice /bin
 cd github
 cd home
 mkdir .docker
