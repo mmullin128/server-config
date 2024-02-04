@@ -24,8 +24,8 @@ ls ~
 cd /
 cd github
 cd home
-ls
-cd .docker
+mkdir .docker
+mkdir config.json
 export PATH="$PATH:$PWD/docker-credential-secretservice"
 sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' config.json
 
