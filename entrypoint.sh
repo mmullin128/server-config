@@ -8,8 +8,9 @@ echo "$5" >> gh-access-token.txt
 echo "$6" >> runner-tag.txt
 
 
-pass init
-#wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.2/docker-credential-secretservice-v0.6.2-amd64.tar.gz
+#pass init
+
+#wget https://github.com/docker/docker-credential-helpers/releases/download/v0.8.1/docker-credential-pass-v0.8.1.linux-amd64 
 #tar -xf docker-credential-secretservice-v0.6.2-amd64.tar.gz
 
 #chmod +x docker-credential-secretservice
