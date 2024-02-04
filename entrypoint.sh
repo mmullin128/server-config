@@ -16,7 +16,7 @@ tar -xf docker-credential-secretservice-v0.6.2-amd64.tar.gz
 chmod +x docker-credential-secretservice
 
 #mv docker-credential-secretservice /usr/local/bin
-
+ls
 export PATH=$PATH:$PWD/docker-credential-secretservice
 #sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' ./.docker/config.json
 
