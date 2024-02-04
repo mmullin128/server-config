@@ -13,7 +13,7 @@ wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.
 tar -xf docker-credential-secretservice-v0.6.2-amd64.tar.gz
 chmod +x docker-credential-secretservice
 #mv docker-credential-secretservice /bin/
-
+pwd
 
 #sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' ./.docker/config.json
 
