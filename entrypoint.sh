@@ -23,7 +23,6 @@ ls /
 echo "---------"
 ls ~
 cd /
-cd bin
 cd github
 cd home
 mkdir .docker
