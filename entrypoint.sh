@@ -23,6 +23,7 @@ echo "---------"
 ls ~
 
 export PATH=$PATH:$PWD/docker-credential-secretservice
+cd /
 sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' /github/home/docker/config.json
 
 cat password.txt | docker login -u $2 --password-stdin
