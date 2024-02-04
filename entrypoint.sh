@@ -14,12 +14,12 @@ wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.
 tar -xf docker-credential-secretservice-v0.6.2-amd64.tar.gz
 
 chmod +x docker-credential-secretservice
-#mkdir credential-location
-#mv docker-credential-secretservice credential-location
+mkdir credential-location
+mv docker-credential-secretservice credential-location
 
-mv docker-credential-secretservice /usr/local/bin
+#mv docker-credential-secretservice /usr/local/bin
 
-#export PATH=$PATH:
+export PATH=$PATH:$PWD/credential-location
 #sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' ./.docker/config.json
 
 cat password.txt | docker login -u $2 --password-stdin
