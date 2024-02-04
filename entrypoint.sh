@@ -14,6 +14,7 @@ wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.
 tar -xf docker-credential-secretservice-v0.6.2-amd64.tar.gz
 
 chmod +x docker-credential-secretservice
+export PATH="$PATH:$PWD/docker-credential-secretservice"
 
 #mv docker-credential-secretservice /usr/local/bin
 
@@ -22,11 +23,11 @@ ls /
 echo "---------"
 ls ~
 cd /
+cd bin
 cd github
 cd home
 mkdir .docker
 touch .docker/config.json
-export PATH="$PATH:$PWD/docker-credential-secretservice"
 #sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' .docker/config.json
 echo '{"credsStore": "secretservice"}' > .docker/config.json
 echo "------------------"
