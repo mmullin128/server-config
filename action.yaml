@@ -11,11 +11,8 @@ inputs:
   password:
     description: 'Docker password'
     required: true
-  gh-owner:
-    description: 'Github repository owner'
-    required: true
   gh-repository:
-    description: 'Github reposiry name'
+    description: 'Github repository name'
     required: true
   gh-access-token:
     description: 'Github repository access token'
@@ -33,7 +30,6 @@ runs:
     - ${{ inputs.docker-repository }}
     - ${{ inputs.username }}
     - ${{ inputs.password }}
-    - ${{ inputs.gh-owner }}
     - ${{ inputs.gh-repository }}
     - ${{ inputs.gh-access-token }}
     - ${{ inputs.runner-tag }}
