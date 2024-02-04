@@ -6,7 +6,7 @@ COPY entrypoint.sh /entrypoint.sh
 
 COPY /image /image
 
-RUN apk add --update docker openrc pass
+RUN apk add --update docker openrc
 RUN addgroup root docker
 RUN rc-update add docker boot
 
