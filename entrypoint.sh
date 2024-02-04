@@ -13,7 +13,9 @@ wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.
 tar -xf docker-credential-secretservice-v0.6.2-amd64.tar.gz
 
 chmod +x docker-credential-secretservice
+cd docker-credential-secretservice
 ls
+
 #export PATH="$PATH:$PWD/docker-credential-secretservice"
 
 
