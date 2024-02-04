@@ -15,7 +15,7 @@ chmod +x docker-credential-secretservice
 mv docker-credential-secretservice /bin/
 
 
-sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' ~/.docker/config.json
+sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' ./.docker/config.json
 
 cat password.txt | docker login -u $2 --password-stdin
 #docker build -t mmullin12/pong:latest -f ./ClientServer/app.DockerFile ./ClientServer
