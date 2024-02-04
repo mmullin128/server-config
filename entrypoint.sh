@@ -9,21 +9,21 @@ echo "$6" >> runner-tag.txt
 
 
 
-wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.2/docker-credential-secretservice-v0.6.2-amd64.tar.gz
-tar -xf docker-credential-secretservice-v0.6.2-amd64.tar.gz
+#wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.2/docker-credential-secretservice-v0.6.2-amd64.tar.gz
+#tar -xf docker-credential-secretservice-v0.6.2-amd64.tar.gz
 
 #chmod +x docker-credential-secretservice
-ls
+#ls
 
 #export PATH="$PATH:$PWD/docker-credential-secretservice"
 
 
 
-echo $PATH
+#echo $PATH
 #mv d
 cd /
-mv /github/workspace/docker-credential-secretservice /bin
-chmod +x /bin/docker-credential-secretservice
+#mv /github/workspace/docker-credential-secretservice /bin
+#chmod +x /bin/docker-credential-secretservice
 cd github
 cd home
 mkdir .docker
@@ -34,6 +34,6 @@ echo "------------------"
 cat .docker/config.json
 cd ..
 cd workspace
-cat password.txt | docker login -u $2 --password-stdin
+#cat password.txt | docker login -u $2 --password-stdin
 #docker build -t mmullin12/pong:latest -f ./ClientServer/app.DockerFile ./ClientServer
 #docker push mmullin12/pong:latest
