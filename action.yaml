@@ -24,7 +24,8 @@ inputs:
     description: 'Tag for self-hosted runner'
     required: true
 outputs:
-  vars:
+  vars: # id of output
+    description: 'Vars'
 runs:
   using: 'docker'
   image: 'Dockerfile'
