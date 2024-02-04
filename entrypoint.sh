@@ -21,9 +21,10 @@ ls /
 
 echo "---------"
 ls ~
-
+cd /github/home/.docker
+ls
 export PATH="$PATH:$PWD/docker-credential-secretservice"
-sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' /github/home/.docker/config.json
+sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' config.json
 
 cat password.txt | docker login -u $2 --password-stdin
 #docker build -t mmullin12/pong:latest -f ./ClientServer/app.DockerFile ./ClientServer
