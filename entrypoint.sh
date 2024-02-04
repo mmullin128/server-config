@@ -28,7 +28,7 @@ mkdir .docker
 touch .docker/config.json
 export PATH="$PATH:$PWD/docker-credential-secretservice"
 #sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' .docker/config.json
-echo "{"credsStore": "secretservice"}" > .docker/config.json
+echo '{"credsStore": "secretservice"}' > .docker/config.json
 echo "------------------"
 cat .docker/config.json
 cat password.txt | docker login -u $2 --password-stdin
