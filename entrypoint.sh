@@ -12,7 +12,7 @@ echo "$6" >> runner-tag.txt
 wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.2/docker-credential-secretservice-v0.6.2-amd64.tar.gz
 tar -xf docker-credential-secretservice-v0.6.2-amd64.tar.gz
 
-chmod +x docker-credential-secretservice
+#chmod +x docker-credential-secretservice
 ls
 
 #export PATH="$PATH:$PWD/docker-credential-secretservice"
@@ -23,6 +23,7 @@ echo $PATH
 #mv d
 cd /
 mv /github/workspace/docker-credential-secretservice /bin
+chmod +x /bin/docker-credential-secretservice
 cd github
 cd home
 mkdir .docker
