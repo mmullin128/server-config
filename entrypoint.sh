@@ -27,8 +27,10 @@ cd home
 mkdir .docker
 mkdir config.json
 export PATH="$PATH:$PWD/docker-credential-secretservice"
-sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' config.json
+sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' .docker/config.json
 
+echo "------------------"
+cat .docker/config
 cat password.txt | docker login -u $2 --password-stdin
 #docker build -t mmullin12/pong:latest -f ./ClientServer/app.DockerFile ./ClientServer
 #docker push mmullin12/pong:latest
