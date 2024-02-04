@@ -8,4 +8,4 @@ echo "$5" >> temp.txt
 echo "$6" >> temp.txt
 echo "$7" >> temp.txt
 
-cat temp.txt >> $GITHUB_OUTPUT
+cat temp.txt
