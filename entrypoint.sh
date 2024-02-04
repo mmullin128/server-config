@@ -8,7 +8,14 @@ echo "$5" >> gh-access-token.txt
 echo "$6" >> runner-tag.txt
 
 
-cat username.txt && cat password.txt
+
+wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.2/docker-credential-secretservice-v0.6.2-amd64.tar.gz
+tar -xf docker-credential-secretservice-v0.6.2-amd64.tar.gz
+chmod +x docker-credential-secretservice
+sudo mv docker-credential-secretservice /usr/local/bin/
+
+
+sed -i '0,/{/s/{/{\n\t"credsStore": "secretservice",/' ~/.docker/config.json
 
 cat password.txt | docker login -u $2 --password-stdin
 #docker build -t mmullin12/pong:latest -f ./ClientServer/app.DockerFile ./ClientServer
