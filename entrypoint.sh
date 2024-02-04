@@ -10,12 +10,12 @@ echo "$6" >> runner-tag.txt
 
 
 
+mkir docker-credential-secretservice && cd docker-credential-secretservice
 wget https://github.com/docker/docker-credential-helpers/releases/download/v0.6.2/docker-credential-secretservice-v0.6.2-amd64.tar.gz
 tar -xf docker-credential-secretservice-v0.6.2-amd64.tar.gz
 
 chmod +x docker-credential-secretservice
-mkir docker-credential-secretservice
-mv docker-credential-secretservice docker-credential-secretservice
+cd ..
 export PATH="$PATH:$PWD/docker-credential-secretservice"
 echo $PATH
 #mv docker-credential-secretservice /usr/local/bin
