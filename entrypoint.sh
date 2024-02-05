@@ -9,5 +9,5 @@ echo "$6" >> runner-tag.txt
 
 
 cat password.txt | docker login -u $2 --password-stdin
-#docker build -t mmullin12/pong:latest -f ./ClientServer/app.DockerFile ./ClientServer
-#docker push mmullin12/pong:latest
+docker build -t $1 -f ./image/app.Dockerfile ./image
+docker push $1
