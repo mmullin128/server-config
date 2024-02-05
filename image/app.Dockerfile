@@ -1,11 +1,9 @@
 FROM ubuntu:latest
 
-# Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 
-#RUN for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do apt-get remove $pkg; done
 
-
+#Install Docker
 RUN apt-get update
 RUN yes | apt-get install ca-certificates curl
 RUN install -m 0755 -d /etc/apt/keyrings
@@ -21,8 +19,6 @@ RUN apt-get update
 
 RUN yes | apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-#verify docker
-RUN docker run hello-world
 
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)

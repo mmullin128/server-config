@@ -17,4 +17,4 @@
 #verify docker
 #sudo docker run hello-world
 
-bash
+sudo systemctl start docker
